@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результаты</title>
+</head>
+<body>
+    <h1>Результаты игры</h1>
+    <ul>
+        {% for participant, result in results.items() %}
+            <li>{{ participant }}: {{ result }}</li>
+        {% endfor %}
+    </ul>
+    <p>Победитель: {{ winner }}</p>
+    <a href="{{ url_for('index') }}">На главную</a>
+</body>
+</html>

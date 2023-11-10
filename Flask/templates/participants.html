@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Участники</title>
+</head>
+<body>
+    <h1>Участники</h1>
+    <ul>
+        {% for participant in participants %}
+            <li>{{ participant }}</li>
+        {% endfor %}
+    </ul>
+    <form method="post">
+        <label>Добавить себя в участники:</label>
+        <input type="text" name="name">
+        <input type="submit" value="Добавить">
+    </form>
+    <a href="{{ url_for('index') }}">На главную</a>
+</body>
+</html>
